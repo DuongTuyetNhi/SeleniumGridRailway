@@ -44,7 +44,7 @@ public class DriverManagement {
                 }
                 break;
             case "grid":
-                String URL_GRID = "http://192.168.60.18:4444";
+                String URL_GRID = getProperty("grid_url");
                 switch (browser) {
                     case "chrome":
                         ChromeOptions chromeOptions = new ChromeOptions();
