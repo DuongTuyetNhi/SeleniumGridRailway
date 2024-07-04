@@ -8,11 +8,11 @@
         <parameter name="browser" value="firefox"/>
 <!--        <parameter name="runMode" value="grid"/>-->
         <classes>
-            <class name="LogoutTest"/>
+            <class name="LogoutTest"></class>
         </classes>
     </test>
 
-    <test name="Chrome2 test">
+    <test name="Chrome test">
         <parameter name="browser" value="chrome"/>
 <!--        <parameter name="runMode" value="grid"/>-->
         <classes>
@@ -20,11 +20,12 @@
         </classes>
     </test>
 
-<!--    <test name="Edge test">-->
-<!--        <parameter name="browser" value="edge"/>-->
+    <test name="MicrosoftEdge test">
+        <parameter name="browser" value="edge"/>
 <!--        <parameter name="runMode" value="grid"/>-->
-<!--        <classes>-->
-<!--            <class name="LogoutTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+        <classes>
+            <class name="LogoutTest"/>
+        </classes>
+    </test>
+
 </suite>

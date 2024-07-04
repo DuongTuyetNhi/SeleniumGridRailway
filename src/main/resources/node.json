@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    {
+      "port": 5555,
+      "capabilities": [
+        {
+          "browserName": "chrome",
+          "maxInstances": 5,
+          "nodeType": "node1"
+        }
+      ],
+      "configuration": {
+        "hubHost": "http://localhost"
+      }
+    },
+
+    {
+      "port": 6666,
+      "capabilities": [
+        {
+          "browserName": "firefox",
+          "maxInstances": 5,
+          "nodeType": "node2"
+        }
+      ],
+      "configuration": {
+        "hubHost": "http://localhost"
+      }
+    }
+  ]
+}

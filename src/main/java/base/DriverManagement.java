@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -38,29 +39,32 @@ public class DriverManagement {
                     case "firefox":
                         driver.set(new FirefoxDriver());
                         break;
+                    case "edge":
+                        driver.set(new EdgeDriver());
+                        break;
                     default:
                         driver.set(new ChromeDriver());
                         break;
                 }
                 break;
             case "grid":
-                String URL_GRID = getProperty("grid_url");
+                String remoteUrl = getProperty("remoteUrl");
                 switch (browser) {
                     case "chrome":
                         ChromeOptions chromeOptions = new ChromeOptions();
-                        driver.set(new RemoteWebDriver(new URL(URL_GRID), chromeOptions));
+                        driver.set(new RemoteWebDriver(new URL(remoteUrl), chromeOptions));
                         break;
                     case "firefox":
                         FirefoxOptions firefoxOptions = new FirefoxOptions();
-                        driver.set(new RemoteWebDriver(new URL(URL_GRID), firefoxOptions));
+                        driver.set(new RemoteWebDriver(new URL(remoteUrl), firefoxOptions));
                         break;
-//                    case "edge":
-//                        EdgeOptions edgeOptions = new EdgeOptions();
-//                        driver.set(new RemoteWebDriver(new URL(URL_GRID), edgeOptions));
-//                        break;
+                    case "edge":
+                        EdgeOptions edgeOptions = new EdgeOptions();
+                        driver.set(new RemoteWebDriver(new URL(remoteUrl), edgeOptions));
+                        break;
                     default:
                         ChromeOptions defaultOptions = new ChromeOptions();
-                        driver.set(new RemoteWebDriver(new URL(URL_GRID), defaultOptions));
+                        driver.set(new RemoteWebDriver(new URL(remoteUrl), defaultOptions));
                         break;
                 }
                 break;
