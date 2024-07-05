@@ -39,9 +39,9 @@ public class DriverManagement {
                     case "firefox":
                         driver.set(new FirefoxDriver());
                         break;
-                    case "edge":
-                        driver.set(new EdgeDriver());
-                        break;
+//                    case "edge":
+//                        driver.set(new EdgeDriver());
+//                        break;
                     default:
                         driver.set(new ChromeDriver());
                         break;
@@ -58,10 +58,10 @@ public class DriverManagement {
                         FirefoxOptions firefoxOptions = new FirefoxOptions();
                         driver.set(new RemoteWebDriver(new URL(remoteUrl), firefoxOptions));
                         break;
-                    case "edge":
-                        EdgeOptions edgeOptions = new EdgeOptions();
-                        driver.set(new RemoteWebDriver(new URL(remoteUrl), edgeOptions));
-                        break;
+//                    case "edge":
+//                        EdgeOptions edgeOptions = new EdgeOptions();
+//                        driver.set(new RemoteWebDriver(new URL(remoteUrl), edgeOptions));
+//                        break;
                     default:
                         ChromeOptions defaultOptions = new ChromeOptions();
                         driver.set(new RemoteWebDriver(new URL(remoteUrl), defaultOptions));

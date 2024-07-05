@@ -1,3 +1,5 @@
+package parallelExecution;
+
 import base.DriverManagement;
 import models.User;
 import org.testng.Assert;
@@ -7,15 +9,14 @@ import pageObject.LoginPage;
 
 import static base.DriverManagement.getDriver;
 
-public class ParallelTest {
+public class DataProviderTest {
     User validUser = new User("nhi@grr.la", "12345678");
 
     @DataProvider(name = "browserProvider", parallel = true)
     public Object[][] browserProvider() {
         return new Object[][]{
                 {"chrome"},
-                {"firefox"},
-                {"edge"}
+                {"firefox"}
         };
     }
 

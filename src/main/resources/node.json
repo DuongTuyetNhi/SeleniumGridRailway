@@ -5,26 +5,25 @@
       "capabilities": [
         {
           "browserName": "chrome",
-          "maxInstances": 5,
-          "nodeType": "node1"
+          "maxInstances": 5
         }
       ],
       "configuration": {
-        "hubHost": "http://localhost"
+        "hubHost": "localhost",
+        "hubPort": 4444
       }
     },
-
     {
       "port": 6666,
       "capabilities": [
         {
           "browserName": "firefox",
-          "maxInstances": 5,
-          "nodeType": "node2"
+          "maxInstances": 5
         }
       ],
       "configuration": {
-        "hubHost": "http://localhost"
+        "hubHost": "localhost",
+        "hubPort": 4444
       }
     }
   ]

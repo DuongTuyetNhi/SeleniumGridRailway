@@ -20,12 +20,12 @@
         </classes>
     </test>
 
-    <test name="MicrosoftEdge test">
-        <parameter name="browser" value="edge"/>
+<!--    <test name="MicrosoftEdge test">-->
+<!--        <parameter name="browser" value="edge"/>-->
 <!--        <parameter name="runMode" value="grid"/>-->
-        <classes>
-            <class name="LogoutTest"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="LogoutTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>
